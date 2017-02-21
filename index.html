@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tabla dinámica</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <h3>Agregar un producto</h3>
+                    
+                    <form id="frmAgregar">
+                        <div class="form-group">
+                            <label for="cmbProductos">Producto</label>
+                            <select id="cmbProductos" class="form-control"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCantidad">Cantidad</label>
+                            <input type="number" id="txtCantidad" class="form-control" value="1" min="1">
+                        </div>
+                        <div class="form-group text-right">
+                            <input type="submit" id="btnAgregar" class="btn btn-primary" value="Agregar al carrito">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-xs-12 col-md-8">
+                    <hr class="hidden-md hidden-lg">
+                    <h3>Carrito de compras</h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th width="30%">Producto</th>
+                                <th width="10%">Cantidad</th>
+                                <th width="25%">Precio unitario</th>
+                                <th width="25%">Total</th>
+                                <th width="10%"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblCarrito">
+                            <tr>
+                                <td colspan="5">No hay productos en el carrito</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/application.js"></script>
+    </body>
+</html>

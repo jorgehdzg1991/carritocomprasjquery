@@ -86,8 +86,8 @@ function eliminarProducto(id) {
     actualizarHtmlTabla(carrito.elementos);
 }
 
-function cambiarCantidad(e, id) {
-    var cantidad = parseInt($(e.target).val());
+function cambiarCantidad(elemento, id) {
+    var cantidad = parseInt($(elemento.target).val());
 
     if (cantidad <= 0) {
         eliminarProducto(id);

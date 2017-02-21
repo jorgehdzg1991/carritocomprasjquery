@@ -122,7 +122,7 @@ function actualizarHtmlTabla(elementos) {
         '   <td><input type="number" class="form-control" onchange="cambiarCantidad(event, ' + elemento.id + ')" min="0" value="' + elemento.cantidad + '" /></td>' +
         '   <td class="text-right">$ ' + producto.precio.toFixed(2) + '</td>' +
         '   <td class="text-right">$ ' + total.toFixed(2) + '</td>' +
-        '   <td><a href="javascript:eliminarProducto(' + elemento.id + ')">Eliminar</a></td>' +
+        '   <td><button class="btn btn-default btn-sm" onclick="eliminarProducto(' + elemento.id + ')"><i class="fa fa-trash-o"></i></button></td>' +
         '</tr>';
 
         $('#tblCarrito').append(html);
@@ -157,6 +157,14 @@ $(document).ready(function() {
         carrito.agregar(id, cantidad);
 
         actualizarHtmlTabla(carrito.elementos);
+    });
+
+    $('#btnLimpiar').click(function (e) {
+        e.preventDefault();
+
+        var carrito = new Carrito();
+        carrito.limpiar();
+        actualizarHtmlTabla([]);
     });
 
     actualizarHtmlTabla(carrito.elementos);

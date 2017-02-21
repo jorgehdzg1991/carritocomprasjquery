@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Tabla dinámica</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
     </head>
     <body>
 
@@ -11,7 +12,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-4">
                     <h3>Agregar un producto</h3>
-                    
+
                     <form id="frmAgregar">
                         <div class="form-group">
                             <label for="cmbProductos">Producto</label>
@@ -22,7 +23,8 @@
                             <input type="number" id="txtCantidad" class="form-control" value="1" min="1">
                         </div>
                         <div class="form-group text-right">
-                            <input type="submit" id="btnAgregar" class="btn btn-primary" value="Agregar al carrito">
+                            <button class="btn btn-danger" id="btnLimpiar"> <i class="fa fa-ban"></i> Limpiar carrito</button>
+                            <button type="submit" id="btnAgregar" class="btn btn-primary"><i class="fa fa-plus"></i> Agregar</button>
                         </div>
                     </form>
                 </div>
@@ -37,7 +39,7 @@
                                 <th width="10%">Cantidad</th>
                                 <th width="25%">Precio unitario</th>
                                 <th width="25%">Total</th>
-                                <th width="10%"></th>
+                                <th width="10%">Eliminar</th>
                             </tr>
                         </thead>
                         <tbody id="tblCarrito">
